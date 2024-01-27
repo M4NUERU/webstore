@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');       
 
+
 *{
-    font-family: 'Bebas Neue', sans-serif;
     margin:0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+}
+
+body{
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 img{
@@ -38,7 +42,7 @@ img{
 
 .logo{
     font-size:25px;
-    color:#98CE21;
+    color:#9BCE21;
     text-transform: uppercase;
     font-weight: 800;
 
@@ -57,12 +61,15 @@ img{
 }
 
 .menu .navbar ul li a:hover {
-    color: #98CE21;
+    color: #9BCE21;
 }
 #menu{
     display: none;
 }
 .menu-icono{
+    width: 25px;
+}
+.menu label{
     cursor:pointer;
     display: none;
 
@@ -82,7 +89,7 @@ img{
     backdrop-filter: blur(10px);
     top:100%;
     z-index: 1;
-    background-color: #4E485076;
+    background-color: #4E4B5076;
     padding:20px;
     min-width:400px;
 
@@ -96,7 +103,7 @@ th, td{
     color: #ffffff;
 }
 .borrar{
-    background-color: #98CE21;
+    background-color: #9BCE21;
     border-radius: 50%;
     padding: 5px 10px;
     color: #ffffff;
@@ -142,20 +149,28 @@ span{
 .btn-1{
     display:inline-block;
     padding: 13px 25px;
-    background-color: #98CE21;
-    margin-right: 200px;
+    background-color: #9BCE21;
+    margin-right: 20px;
     color: #ffffff;
     text-transform: capitalize;
-    margin-bottom: 100%;
+    margin-bottom: 100px;
+    
+   
 }
+
+
+
 .header-img{
-   flex-basis: 100%;
+    
+   flex-basis: 50%;
     text-align: center;
 
 }
-.header-img img{
-    height: 550px;
-    
+.header-img img {
+    height: 100%;
+    width: 100%;
+    display: flex ;
+
 }
 
 .oferts{
@@ -179,7 +194,7 @@ span{
     background-color: #fa9824;
 }
 .b3{
-    background-color: #98CE21;
+    background-color: #9BCE21;
 }
 .ofert-txt{
     flex-basis: 50%;
@@ -191,6 +206,9 @@ span{
 
 .ofert-txt a{
     color: #ffffff;
+}
+.ofert-txt a:hover{
+    color: #515151;
 }
 .products{
     padding: 0 0 50px 0;
@@ -207,21 +225,22 @@ h2{
     gap: 20px;
 }
 .box{
-    border-top: 2px solid #98CE21;
+    border-top: 2px solid #9BCE21;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: #f6fafb;
+    display: none;
 }
 
-.box:ntn-child(1),
-.box:ntn-child(2),
-.box:ntn-child(3),
-.box:ntn-child(4),
-.box:ntn-child(5),
-.box:ntn-child(6),
-.box:ntn-child(7),
-.box:ntn-child(8){
+.box:nth-child(1),
+.box:nth-child(2),
+.box:nth-child(3),
+.box:nth-child(4),
+.box:nth-child(5),
+.box:nth-child(6),
+.box:nth-child(7),
+.box:nth-child(8){
     display: inline-block;
 }
 .box-img{
@@ -243,7 +262,7 @@ h2{
     color: #fa9824 !important;
 }
 .btn-2, .btn-3{
-    background-color: #98CE21;
+    background-color: #9BCE21;
     margin-top: 50px;
     display: inline-block;
     padding: 11px 35px;
@@ -280,7 +299,7 @@ h2{
     padding:25px;
     text-align: left;
     background-color: #f6fafb;
-    border-top: 5px solid #98CE21;
+    border-top: 5px solid #9BCE21;
 }
 .testimonial-1 img{
     width: 100px;

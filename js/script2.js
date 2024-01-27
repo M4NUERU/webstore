@@ -17,7 +17,7 @@ loadMoreBtn.onclick = () => {
 // Shopping cart
 const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
-const lista = document.getElementById('lista-carrito tbody');
+const lista = document.querySelector('lista-carrito tbody');
 const vaciarCArritoBtn = document.getElementById('vaciar-carrito');
 
 cargarEventListeners();
@@ -30,13 +30,9 @@ function cargarEventListeners() {
 
 function comprarElemento(e) {
     e.preventDefault();
-    if (e.target.classList.contains('agregar')) {
+    if (e.target.classList.contains('agregar-carrito')) {
         const elemento = e.target.parentElement.parentElement;
-        try {
-            leerDatosElemento(elemento);
-        } catch (error) {
-            console.error(error);
-        }
+        leerDatosElemento(elemento);
     }
 }
 
@@ -45,10 +41,12 @@ function leerDatosElemento(elemento) {
         imagen: elemento.querySelector('img').src,
         titulo: elemento.querySelector('h3').textContent,
         precio: elemento.querySelector('.precio').textContent,
-        id: elemento.querySelector('a').getAttribute('data-id')
+        id: elemento.querySelector('.agregar-carrito').getAttribute('data-id')
     }
     insertarCarrito(infoElemento);
 }
+
+
 
 function insertarCarrito(elemento) {
     const row = document.createElement('tr');
@@ -67,7 +65,6 @@ function insertarCarrito(elemento) {
     </td>
     `;
     lista.appendChild(row);
-    carrito.dataset.items = lista.innerHTML;
 }
 
 function eliminarElemento(e) {
