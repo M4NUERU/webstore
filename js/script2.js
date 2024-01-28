@@ -17,15 +17,15 @@ loadMoreBtn.onclick = () => {
 // Shopping cart
 const carrito = document.getElementById('carrito');
 const elementos1 = document.getElementById('lista-1');
-const lista = document.querySelector('lista-carrito tbody');
-const vaciarCArritoBtn = document.getElementById('vaciar-carrito');
+const lista = document.getElementById('lista-carrito').querySelector('tbody'); 
+const vaciarCarritoBtn = document.getElementById('vaciar-carrito'); // Corrección en el nombre de la variable
 
 cargarEventListeners();
 
 function cargarEventListeners() {
     elementos1.addEventListener('click', comprarElemento);
     carrito.addEventListener('click', eliminarElemento);
-    vaciarCArritoBtn.addEventListener('click', vaciarCarrito);
+    vaciarCarritoBtn.addEventListener('click', vaciarCarrito);
 }
 
 function comprarElemento(e) {
@@ -45,8 +45,6 @@ function leerDatosElemento(elemento) {
     }
     insertarCarrito(infoElemento);
 }
-
-
 
 function insertarCarrito(elemento) {
     const row = document.createElement('tr');
@@ -74,7 +72,7 @@ function eliminarElemento(e) {
     if (e.target.classList.contains('borrar')) {
         e.target.parentElement.parentElement.remove();
         elemento = e.target.parentElement.parentElement;
-        elementoId = elemento.querySelector('a').getAttribute('data-id');
+        elementoId = elemento.getAttribute('data-id'); // Corrección aquí
     }
 }
 
